@@ -1,0 +1,88 @@
+<div class="container mt-2">
+    <h3 class="mt-4 mb-4 justify-content-center d-flex">Add Product</h3>
+    <form action="">
+
+    <form (ngSubmit)="onSubmit()"> 
+        
+
+        <div class="row">
+            <label for="snumber" class="col-sm-2 col-form-label col-form-label-lg">Product ID:</label>
+            <label for="snumber" class="col-sm-2 col-form-label col-form-label-lg">Serial Number:</label>
+            <div class="col-sm-8">
+              <input type="number" name="snumber" class="form-control" id="snumber" />
+              <input type="number" name="snumber" class="form-control" id="snumber" [(ngModel)]="p.sNumber"/>
+            </div>
+          </div>
+
+          <div class="row">
+              <label for="pname" class="col-sm-2 col-form-label col-form-label-lg">Product Name:</label>
+              <div class="col-sm-8">
+                <input type="text" name="pname" class="form-control" id="pname"/>
+                <input type="text" name="pname" class="form-control" id="pname" [(ngModel)]="p.name" />
+              </div>
+          </div>
+
+          <div class="row">
+            <label for="" class="col-sm-2 col-form-label col-form-label-lg">Product Price:</label>
+            <label for="price" class="col-sm-2 col-form-label col-form-label-lg">Price:</label>
+            <div class="col-sm-8">
+              <input type="" name="" class="form-control" id="pname"/>
+              <input type="number" name="price" class="form-control" id="price" [(ngModel)]="p.price" />
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-sm-2 col-form-label col-form-label-lg">Quantity</label>
+            <label for="quantity" class="col-sm-2 col-form-label col-form-label-lg">Quantity</label>
+            <div class="col-sm-8">
+              <input type="" name="" class="form-control" id="pname"/>
+              <input type="number" name="" class="form-control" id="quantity" [(ngModel)]="p.quantity" />
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-sm-2 col-form-label col-form-label-lg">Purchase Date:</label>
+            <label for="purchasedate" class="col-sm-2 col-form-label col-form-label-lg">Purchase Date:</label>
+            <div class="col-sm-8">
+              <input type="" name="" class="form-control" id=""/>
+              <input type="date" name="purchasedate" class="form-control" id="purchasedate" [(ngModel)]="p.purchaseDate"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-sm-2 col-form-label col-form-label-lg">Sell Date</label>
+            <label for="selldate" class="col-sm-2 col-form-label col-form-label-lg">Sell Date</label>
+            <div class="col-sm-8">
+              <input type="" name="" class="form-control" id=""/>
+              <input type="date" name="selldate" class="form-control" id="selldate" [(ngModel)]="p.sellDate"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-sm-2 col-form-label col-form-label-lg">Buyer name:</label>
+            <label for="buyer" class="col-sm-2 col-form-label col-form-label-lg">Buyer:</label>
+            <div class="col-sm-8">
+              <input type="" name="" class="form-control" id="pname"/>
+              <input type="text" name="buyer" class="form-control" id="buyer" [(ngModel)]="p.buyer" />
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="" class="col-sm-2 col-form-label col-form-label-lg">Customer:</label>
+            <label for="seller" class="col-sm-2 col-form-label col-form-label-lg">Seller :</label>
+            <div class="col-sm-8">
+              <input type="" name="" class="form-control" id="pname"/>
+              <input type="text" name="seller" class="form-control" id="seller" [(ngModel)]="p.seller" />
+            </div>
+        </div>
+    </form>
+    
+
+  
+
+        <div>
+          <button type="submit" class="btn btn-success">{{ isUpdate? 'Update' : 'Submit' }} </button>
+        </div>
+                
+    </form>    
+</div>
