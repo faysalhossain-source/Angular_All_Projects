@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../app.component.ts';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Product } from '../app.component';
+
 
 @Component({
   selector: 'app-add-product',
-  imports: [FormsModule],
+  imports:  [FormsModule] ,
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.css'
 })
@@ -35,7 +36,7 @@ export class AddProductComponent {
       // Update or add product
       if (this.isUpdate){
         // update the product if sNumber matchs
-        products : products.map((product) => (product.sNumber === this.p.sNumber? this.p : product));        
+        products = products.map((product) => (product.sNumber === this.p.sNumber? this.p : product));        
       } else {
         // Add a new product to the array
         products.push(this.p);
@@ -51,3 +52,9 @@ export class AddProductComponent {
       this.router.navigate(['/list-product']);
     }
 }
+
+
+
+
+
+

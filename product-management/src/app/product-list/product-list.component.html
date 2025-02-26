@@ -7,8 +7,8 @@
            <th scope="col">Product name</th>
            <th scope="col">Price</th>
            <th scope="col">Quantity</th>
-           <th scope="col">purchaseDate</th>
-           <th scope="col">sell Data</th>
+           <th scope="col">purchase Date</th>
+           <th scope="col">sell Date</th>
            <th scope="col ">seller</th>
            <th scope="col ">Buyer</th>
            <th scope="col ">Action</th>
@@ -18,21 +18,18 @@
     <tbody>
         @for (value of product; track value) {
             <tr>
-                t<td>{{product.indexOf(value) + 1}}</td>
+                <td>{{product.indexOf(value) + 1}}</td>
                 <td>{{value.name}}</td>
                 <td>{{value.price}}</td>
                 <td>{{value.quantity}}</td>
                 <td>{{value.purchaseDate}}</td>
                 <td>{{value.sellDate}}</td>
                 <td>{{value.seller}}</td>
-                <td>{{value.buyer}}</td>                   <td>{{product.indexOf(value) + 1}}</td>
-                <td>{{value.name}}</td>
-                <td>{{value.price}}</td>
-                <td>{{value.quantity}}</td>
-                <td>{{value.purchaseDate}}</td>
-                <td>{{value.sellDate}}</td>
-                <td>{{value.seller}}</td>
-                <td>{{value.buyer}}</td>    
+                <td>{{value.buyer}}</td>
+                <td>
+                    <button (click)="editUser(value)">Edit</button>
+                    <button (click)="deleteUser(value)">Delete</button>
+                </td>
             </tr>
         }
     </tbody>

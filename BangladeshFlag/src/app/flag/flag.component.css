@@ -1,0 +1,20 @@
+/* Flag background color */
+.flag {
+  width: 300px;
+  height: 200px;
+  background-color: #006747;  /* Green color for Bangladesh flag */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Red circle in the middle of the flag */
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: #e30b17; /* Red color for the circle */
+  border-radius: 50%;
+  position: absolute;
+}
