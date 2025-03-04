@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h2 class="text-center">Harry Potter Spells</h2>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>School</th>
+        <th>Head Teacher</th>
+        <th>Subject</th>
+        <th>Salary</th>
+        <th>Joining Date</th>
+        <th>Aggressive</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (teacher of teachers; track teacher) {
+      <td>{{ teacher.id }}</td>
+      <td>{{ teacher.name }}</td>
+      <td>{{ teacher.schoolName }}</td>
+      <td>{{ teacher.isHeadTeacher ? "Yes" : "No" }}</td>
+      <td>{{ teacher.assignedSubject }}</td>
+      <td>{{ teacher.salary }}</td>
+      <td>{{ teacher.joiningData }}</td>
+      <td>{{ teacher.isAggressive }}</td>
+      }
+    </tbody>
+  </table>
+</div>
+
+ 
