@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Library Management</h2>
+  
+    <div class="form-group">
+      <input [(ngModel)]="newBook.title" placeholder="Book Title" class="form-control">
+      <input [(ngModel)]="newBook.author" placeholder="Author" class="form-control">
+      <button (click)="addBook()" class="btn btn-primary mt-2">Add Book</button>
+    </div>
+  
+    <h3 class="mt-4">Book List</h3>
+    <ul class="list-group">
+      <li *ngFor="let book of books" class="list-group-item">
+        <div>
+          <strong>{{ book.title }}</strong> by {{ book.author }}
+          <span *ngIf="book.available" class="text-success"> - Available</span>
+          <span *ngIf="!book.available" class="text-danger"> - Borrowed by {{ book.borrowedBy }}</span>
+        </div>
+  
+        <div *ngIf="book.available">
+          <input [(ngModel)]="borrowerName" placeholder="Enter borrower name" class="form-control">
+          <button (click)="borrowBook(book)" class="btn btn-warning">Borrow</button>
+        </div>
+  
+        <button *ngIf="!book.available" (click)="returnBook(book)" class="btn btn-success">Return</button>
+        <button (click)="deleteBook(book.id)" class="btn btn-danger">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
