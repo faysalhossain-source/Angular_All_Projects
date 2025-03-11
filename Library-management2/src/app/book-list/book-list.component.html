@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="card shadow-lg p-4" style="background-color: #f8f9fa; border-radius: 10px;">
+    <h2 class="text-center text-primary mb-3">📚 Book List</h2>
+
+    <ul class="list-group">
+      <li *ngFor="let book of books" class="list-group-item d-flex justify-content-between align-items-center flex-wrap shadow-sm" style="background-color: #ffffff; border-radius: 5px;">
+        <div>
+          <strong class="text-dark">{{ book.title }}</strong> by <span class="text-muted">{{ book.author }}</span>
+          <span *ngIf="book.available" class="badge bg-success ms-2">Available</span>
+          <span *ngIf="!book.available" class="badge bg-danger ms-2">Borrowed by {{ book.borrowedBy }}</span>
+        </div>
+
+        <div class="mt-2 w-100">
+          <div *ngIf="book.available" class="d-flex gap-2">
+            <input [(ngModel)]="book.borrowerName" placeholder="Enter borrower name" class="form-control">
+            <button (click)="borrowBook(book, book.borrowerName)" class="btn btn-warning">📖 Borrow</button>
+          </div>
+          <div class="d-flex gap-2 mt-2">
+            <button *ngIf="!book.available" (click)="returnBook(book.id)" class="btn btn-success">✅ Return</button>
+            <button (click)="deleteBook(book.id)" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+        
+      </li>
+    </ul>
+    
+  </div>
+</div>
