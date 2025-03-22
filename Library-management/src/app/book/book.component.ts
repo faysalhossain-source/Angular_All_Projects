@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
   standalone: true, 
   imports: [FormsModule, CommonModule], 
   templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css'],
-})
+  styleUrls: ['./book.component.css']
+});
 export class BookComponent {
   books: Book[] = []; 
   newBook: Book = { id: 0, title: '', author: '', available: true, borrowedBy: '' }; 
